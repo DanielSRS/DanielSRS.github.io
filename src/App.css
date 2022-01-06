@@ -1,31 +1,111 @@
+/*
 .App {
-  text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+}
+
+.App-header {
+}
+
+.App-link {
+}
+
+*/
+
+@font-face {
+  font-family: Righteous;
+  src: url(./assets/fonts/Righteous-Regular.ttf);
+}
+
+.presentationText {
+  font-family: Righteous;
+  margin: 0;
+  padding: 0;
+}
+
+.introduction {
+  color: #4E28BC;
+  font-size: 18pt;
+  margin-bottom: -24px;
+  margin-left: 8px;
+}
+
+.name {
+  color: #1A1A1A;
+  font-size: 114pt;
+}
+
+.whatIDo {
+  color: #646464;
+  font-size: 14pt;
+  margin-left: 8px;
+  margin-top: -18px;
+}
+
+.rowDiv {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+}
+
+#developerAnimation {
+  height: 40vw;
+  margin-top: 35.6vh;
+}
+
+.presentationGroup {
+  margin-top: 26vh;
+  margin-left: 10.6vw;
+  z-index: 100;
+  max-width: 50%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .name {
+    color: #1A1A1A;
+    font-size: 64pt;
+  }
+  .presentationGroup {
+    margin-top: 16vh;
+    margin-left: 6vw;
+    z-index: 100;
+    max-width: 88vw;
+  }
+
+  .introduction {
+    color: #4E28BC;
+    font-size: 14pt;
+    margin-bottom: -8px;
+    margin-left: 2pt;
+  }
+
+  .whatIDo {
+    color: #646464;
+    font-size: 14pt;
+    margin-left: 3pt;
+    margin-top: -8px;
+  }
+
+  .rowDiv {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  #developerAnimation {
+    height: 70vh;
+    margin-top: -5vh;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
