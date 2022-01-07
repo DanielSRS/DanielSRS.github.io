@@ -6,7 +6,6 @@ const Cover = () => {
   return (
     <div className='cover'>
       <img src={bgGradient} className='bgGradient' alt='imagem com um gradiente de cores' />
-      cover
     </div>
   );
 }
