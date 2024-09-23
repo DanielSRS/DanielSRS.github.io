@@ -1,4 +1,3 @@
-import { Text } from 'react-native';
 import { createStyledText } from '../StyledBuilder';
 import { createStyledTouchableOpacity } from '../StyledBuilder';
 import { createStyledView } from '../StyledBuilder';
