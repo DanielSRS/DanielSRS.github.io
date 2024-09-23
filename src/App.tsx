@@ -1,3 +1,4 @@
+import { AboutMe } from "./components/AboutMe/AboutMe";
 import { Hero } from "./components/Hero/Hero";
 import { Navbar } from "./components/Navbar/Navbar";
 import { createStyledView } from "./components/StyledBuilder";
@@ -11,6 +12,9 @@ export const App = () => {
 
         {/* Hero */}
         <Hero />
+
+        {/* About me */}
+        <AboutMe />
       </Sections>
     </AppContainer>
   )
