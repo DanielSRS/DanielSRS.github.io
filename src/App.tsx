@@ -1,28 +1,30 @@
-import { AboutMe } from "./components/AboutMe/AboutMe";
-import { Hero } from "./components/Hero/Hero";
-import { Navbar } from "./components/Navbar/Navbar";
 import { createStyledView } from "./components/StyledBuilder";
+import { ScrollView } from "react-native";
+import { AboutMe } from "./components/AboutMe/AboutMe";
+import { Navbar } from "./components/Navbar/Navbar";
+import { Hero } from "./components/Hero/Hero";
 
 export const App = () => {
   return (
     <AppContainer>
-      <Sections>
-        {/* Navbar */}
-        <Navbar />
+      <ScrollView contentContainerStyle={alignItems}>
+        <Sections>
+          {/* Navbar */}
+          <Navbar />
 
-        {/* Hero */}
-        <Hero />
+          {/* Hero */}
+          <Hero />
 
-        {/* About me */}
-        <AboutMe />
-      </Sections>
+          {/* About me */}
+          <AboutMe />
+        </Sections>
+      </ScrollView>
     </AppContainer>
   )
 };
 
 const AppContainer = createStyledView({
   flex: 1,
-  alignItems: 'center',
   backgroundColor: '#000',
 });
 
@@ -32,3 +34,5 @@ const Sections = createStyledView({
   width: '100%',
   backgroundColor: '#FFFFFF',
 });
+
+const alignItems = { alignItems: 'center' } as const;
