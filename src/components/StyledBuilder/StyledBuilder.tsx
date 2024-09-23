@@ -1,6 +1,13 @@
 import React from 'react';
 import { TouchableOpacity, Text, View } from 'react-native';
-import type { StyleProp, TextProps, TextStyle, TouchableOpacityProps, ViewProps, ViewStyle } from 'react-native';
+import type {
+  StyleProp,
+  TextProps,
+  TextStyle,
+  TouchableOpacityProps,
+  ViewProps,
+  ViewStyle,
+} from 'react-native';
 
 export const createStyledView =
   (defaultStyles: StyleProp<ViewStyle>) => (props: ViewProps) =>

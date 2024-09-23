@@ -1,8 +1,8 @@
-import { DoingCard } from "./DoingCard";
-import type { Meta, StoryObj } from "@storybook/react";
+import { DoingCard } from './DoingCard';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: "Components/AboutMe/DoingCard",
+  title: 'Components/AboutMe/DoingCard',
   component: DoingCard,
 } satisfies Meta<typeof DoingCard>;
 

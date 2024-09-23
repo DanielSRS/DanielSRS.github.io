@@ -1,8 +1,9 @@
-import { createStyledView } from "./components/StyledBuilder";
-import { ScrollView } from "react-native";
-import { AboutMe } from "./components/AboutMe/AboutMe";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Hero } from "./components/Hero/Hero";
+import React from 'react';
+import { createStyledView } from './components/StyledBuilder';
+import { ScrollView } from 'react-native';
+import { AboutMe } from './components/AboutMe/AboutMe';
+import { Navbar } from './components/Navbar/Navbar';
+import { Hero } from './components/Hero/Hero';
 
 export const App = () => {
   return (
@@ -20,7 +21,7 @@ export const App = () => {
         </Sections>
       </ScrollView>
     </AppContainer>
-  )
+  );
 };
 
 const AppContainer = createStyledView({

@@ -1,3 +1,4 @@
+import React from 'react';
 import { createStyledText } from '../StyledBuilder';
 import { createStyledTouchableOpacity } from '../StyledBuilder';
 import { createStyledView } from '../StyledBuilder';

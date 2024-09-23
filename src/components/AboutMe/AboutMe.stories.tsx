@@ -1,8 +1,8 @@
-import { AboutMe } from "./AboutMe";
-import type { Meta, StoryObj } from "@storybook/react";
+import { AboutMe } from './AboutMe';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: "Components/AboutMe",
+  title: 'Components/AboutMe',
   component: AboutMe,
 } satisfies Meta<typeof AboutMe>;
 

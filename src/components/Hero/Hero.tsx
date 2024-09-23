@@ -1,12 +1,15 @@
-import { createStyledView } from "../StyledBuilder";
-import { createStyledText } from "../StyledBuilder";
+import React from 'react';
+import { createStyledView } from '../StyledBuilder';
+import { createStyledText } from '../StyledBuilder';
 
 export const Hero = () => {
   return (
     <CoverContainer>
       <PresentationGroup>
         <MyName>Daniel Santa Rosa</MyName>
-        <Abstract>6 anos criando coisas legais no front-end, mobile, desktop, back-end, sistemas embarcados, IoT e em microcontroladores.
+        <Abstract>
+          6 anos criando coisas legais no front-end, mobile, desktop, back-end,
+          sistemas embarcados, IoT e em microcontroladores.
         </Abstract>
       </PresentationGroup>
       <Circle />

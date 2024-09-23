@@ -1,8 +1,8 @@
-import { Hero } from "./Hero";
-import type { Meta, StoryObj } from "@storybook/react";
+import { Hero } from './Hero';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: "Components/Hero",
+  title: 'Components/Hero',
   component: Hero,
 } satisfies Meta<typeof Hero>;
 

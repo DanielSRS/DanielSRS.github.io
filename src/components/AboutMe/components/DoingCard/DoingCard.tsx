@@ -1,5 +1,6 @@
-import { createStyledView } from "../../../StyledBuilder";
-import { createStyledText } from "../../../StyledBuilder";
+import React from 'react';
+import { createStyledView } from '../../../StyledBuilder';
+import { createStyledText } from '../../../StyledBuilder';
 
 export const DoingCard = () => {
   return (
@@ -39,7 +40,7 @@ const Description = createStyledText({
 
 const Row = createStyledView({
   flexDirection: 'row',
-  columnGap: 36
+  columnGap: 36,
 });
 
 const InfoGroup = createStyledView({
