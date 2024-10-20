@@ -2,11 +2,17 @@ import React from 'react';
 import { createStyledView } from '../../../StyledBuilder';
 import { createStyledText } from '../../../StyledBuilder';
 
-export const DoingCard = () => {
+interface DoingCardProps {
+  description: string;
+  squared?: boolean;
+}
+export const DoingCard = (props: DoingCardProps) => {
+  const { description, squared } = props;
+
   return (
     <Container>
       {/*  */}
-      <Description>O que estou lendo</Description>
+      <Description>{description}</Description>
       <Row>
         {/*  */}
         <InfoGroup>
@@ -17,7 +23,8 @@ export const DoingCard = () => {
 
         {/*  */}
         <CoverContainer>
-          <Retangle />
+          {!squared && <Retangle />}
+          {!!squared && <Square />}
         </CoverContainer>
       </Row>
     </Container>
@@ -28,6 +35,8 @@ const Container = createStyledView({
   borderWidth: 1,
   rowGap: 23,
   padding: 19,
+  height: 228,
+  overflow: 'hidden',
 });
 
 const Description = createStyledText({
@@ -58,5 +67,11 @@ const CoverContainer = createStyledView({
 const Retangle = createStyledView({
   width: 97,
   height: 144,
+  backgroundColor: '#B1B2B5',
+});
+
+const Square = createStyledView({
+  width: 116,
+  aspectRatio: 1,
   backgroundColor: '#B1B2B5',
 });

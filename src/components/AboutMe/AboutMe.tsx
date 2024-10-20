@@ -33,7 +33,8 @@ export const AboutMe = () => {
             <Info> </Info>
             <Info>
               No meu tempo livre, adoro explorar novas tecnologias, projetos
-              open source, ler diferentes livros (as vezes ao mesmo tempo)
+              open source, ler diferentes livros{' '}
+              <InfoLineThrough>(as vezes ao mesmo tempo)</InfoLineThrough>
             </Info>
             <Info> </Info>
           </InfoGroup>
@@ -43,9 +44,9 @@ export const AboutMe = () => {
       {/*  */}
       <DoingGroup>
         {/*  */}
-        <DoingCard />
-        <DoingCard />
-        <DoingCard />
+        <DoingCard description="O que estou lendo" />
+        <DoingCard description="O que estou estudando" />
+        <DoingCard description="O que estou ouvindo" squared />
       </DoingGroup>
     </Container>
   );
@@ -64,6 +65,10 @@ const DoingGroup = createStyledView({
 
 const Info = createStyledText({
   fontSize: 14,
+});
+const InfoLineThrough = createStyledText({
+  fontSize: 14,
+  textDecorationLine: 'line-through',
 });
 
 const Container = createStyledView({
