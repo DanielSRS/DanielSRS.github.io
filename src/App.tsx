@@ -4,6 +4,7 @@ import { ScrollView } from 'react-native';
 import { AboutMe } from './components/AboutMe/AboutMe';
 import { Navbar } from './components/Navbar/Navbar';
 import { Hero } from './components/Hero/Hero';
+import { Projects } from './components/Projects/Projects';
 
 export const App = () => {
   return (
@@ -18,6 +19,9 @@ export const App = () => {
 
           {/* About me */}
           <AboutMe />
+
+          {/* Projects */}
+          <Projects />
         </Sections>
       </ScrollView>
     </AppContainer>
