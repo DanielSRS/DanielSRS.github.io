@@ -10,13 +10,13 @@ import type {
 } from 'react-native';
 
 export const createStyledView =
-  (defaultStyles: StyleProp<ViewStyle>) => (props: ViewProps) =>
+  (defaultStyles?: StyleProp<ViewStyle>) => (props: ViewProps) =>
     <View {...props} style={[defaultStyles, props.style]} />;
 
 export const createStyledText =
-  (defaultStyles: StyleProp<TextStyle>) => (props: TextProps) =>
+  (defaultStyles?: StyleProp<TextStyle>) => (props: TextProps) =>
     <Text {...props} style={[defaultStyles, props.style]} />;
 
 export const createStyledTouchableOpacity =
-  (defaultStyles: StyleProp<ViewStyle>) => (props: TouchableOpacityProps) =>
+  (defaultStyles?: StyleProp<ViewStyle>) => (props: TouchableOpacityProps) =>
     <TouchableOpacity {...props} style={[defaultStyles, props.style]} />;
