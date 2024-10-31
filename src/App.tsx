@@ -11,11 +11,12 @@ import { Contact } from './components/Contact/Contact';
 export const App = () => {
   return (
     <AppContainer>
+      <FixedContainer>
+        {/* Navbar */}
+        <Navbar />
+      </FixedContainer>
       <ScrollView contentContainerStyle={alignItems}>
         <Sections>
-          {/* Navbar */}
-          <Navbar />
-
           {/* Hero */}
           <Hero />
 
@@ -39,6 +40,14 @@ export const App = () => {
 const AppContainer = createStyledView({
   flex: 1,
   backgroundColor: '#000',
+});
+
+const FixedContainer = createStyledView({
+  // maxWidth: 960,
+  // flex: 1,
+  // alignSelf: 'center',
+  // width: '100%',
+  backgroundColor: '#FFFFFF',
 });
 
 const Sections = createStyledView({
