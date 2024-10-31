@@ -18,5 +18,8 @@ function validateEnv(a: Assert<EnvData>) {
   return a as EnvData;
 }
 
-const envData = process.env;
-export const ENV = validateEnv(envData as any);
+const envData = {
+  EXPO_PUBLIC_CurrentData:
+    'https://gist.githubusercontent.com/DanielSRS/877ecf01d572e17f902a281a3e540c6e/raw/current.json',
+};
+export const ENV = validateEnv(envData);
