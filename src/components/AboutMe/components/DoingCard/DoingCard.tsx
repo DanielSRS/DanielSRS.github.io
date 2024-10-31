@@ -1,13 +1,17 @@
 import React from 'react';
 import { createStyledView } from '../../../StyledBuilder';
 import { createStyledText } from '../../../StyledBuilder';
+import { Image } from 'react-native';
 
 interface DoingCardProps {
   description: string;
   squared?: boolean;
+  artist: string;
+  work: string;
+  imageUrl: string;
 }
 export const DoingCard = (props: DoingCardProps) => {
-  const { description, squared } = props;
+  const { description, squared, imageUrl, artist, work } = props;
 
   return (
     <Container>
@@ -17,14 +21,22 @@ export const DoingCard = (props: DoingCardProps) => {
         {/*  */}
         <InfoGroup>
           {/*  */}
-          <Info>Titulo do livro</Info>
-          <Info>Autor do livro</Info>
+          <Info>{work}</Info>
+          <Info>{artist}</Info>
         </InfoGroup>
 
         {/*  */}
         <CoverContainer>
-          {!squared && <Retangle />}
-          {!!squared && <Square />}
+          {!squared && (
+            <Retangle>
+              <Image source={{ uri: imageUrl }} style={full} />
+            </Retangle>
+          )}
+          {!!squared && (
+            <Square>
+              <Image source={{ uri: imageUrl }} style={full} />
+            </Square>
+          )}
         </CoverContainer>
       </Row>
     </Container>
@@ -49,7 +61,7 @@ const Description = createStyledText({
 
 const Row = createStyledView({
   flexDirection: 'row',
-  columnGap: 36,
+  columnGap: 25,
 });
 
 const InfoGroup = createStyledView({
@@ -75,3 +87,5 @@ const Square = createStyledView({
   aspectRatio: 1,
   backgroundColor: '#B1B2B5',
 });
+
+const full = { flex: 1, borderWidth: 1 };
