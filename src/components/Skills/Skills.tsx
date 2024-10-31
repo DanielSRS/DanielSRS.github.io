@@ -31,7 +31,7 @@ const R5 = {
 
 export const Skills = () => {
   return (
-    <Container>
+    <Container id="skills">
       {/* T */}
       <TitleGroup>
         <Title>Habilidades</Title>

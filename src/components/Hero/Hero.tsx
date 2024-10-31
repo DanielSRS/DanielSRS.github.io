@@ -4,7 +4,7 @@ import { createStyledText } from '../StyledBuilder';
 
 export const Hero = () => {
   return (
-    <CoverContainer>
+    <CoverContainer id="cover">
       <PresentationGroup>
         <MyName>Daniel Santa Rosa</MyName>
         <Abstract>

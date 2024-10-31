@@ -5,7 +5,7 @@ import { Image } from 'react-native';
 
 export const Projects = () => {
   return (
-    <Container>
+    <Container id="projects">
       {/* T */}
       <TitleGroup>
         <Title>Projetos</Title>

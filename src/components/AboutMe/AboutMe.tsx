@@ -5,7 +5,7 @@ import { DoingCard } from './components/DoingCard/DoingCard';
 
 export const AboutMe = () => {
   return (
-    <Container>
+    <Container id={'about'}>
       {/*  */}
       <AboutArea>
         {/*  */}

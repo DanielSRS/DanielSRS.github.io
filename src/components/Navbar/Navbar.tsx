@@ -1,39 +1,51 @@
 import React from 'react';
 import { createStyledText } from '../StyledBuilder';
-import { createStyledTouchableOpacity } from '../StyledBuilder';
 import { createStyledView } from '../StyledBuilder';
+import { Link } from '../Link/Link';
 
 export const Navbar = () => {
   return (
     <NavbarContainer>
       {/* Capa */}
       <NavbarItem>
-        <NavbarItemText>Capa</NavbarItemText>
+        <Link target="#cover">
+          <NavbarItemText>Capa</NavbarItemText>
+        </Link>
       </NavbarItem>
 
       {/* Sobre */}
       <NavbarItem>
-        <NavbarItemText>Sobre</NavbarItemText>
+        <Link target="#about">
+          <NavbarItemText>Sobre</NavbarItemText>
+        </Link>
       </NavbarItem>
 
       {/* Projetos */}
       <NavbarItem>
-        <NavbarItemText>Projetos</NavbarItemText>
+        <Link target="#projects">
+          <NavbarItemText>Projetos</NavbarItemText>
+        </Link>
       </NavbarItem>
 
       {/* Habilidades */}
       <NavbarItem>
-        <NavbarItemText>Habilidades</NavbarItemText>
+        <Link target="#skills">
+          <NavbarItemText>Habilidades</NavbarItemText>
+        </Link>
       </NavbarItem>
 
       {/* Contato */}
       <NavbarItem>
-        <NavbarItemText>Contato</NavbarItemText>
+        <Link target="#contact">
+          <NavbarItemText>Contato</NavbarItemText>
+        </Link>
       </NavbarItem>
 
       {/* Blog */}
       <NavbarItem>
-        <NavbarItemText>Blog</NavbarItemText>
+        <Link target="#blog">
+          <NavbarItemText>Blog</NavbarItemText>
+        </Link>
       </NavbarItem>
     </NavbarContainer>
   );
@@ -48,7 +60,7 @@ const NavbarContainer = createStyledView({
   paddingVertical: 24,
 });
 
-const NavbarItem = createStyledTouchableOpacity({
+const NavbarItem = createStyledView({
   paddingVertical: 4,
   paddingHorizontal: 16,
   borderWidth: 1,

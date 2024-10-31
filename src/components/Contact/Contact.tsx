@@ -5,7 +5,7 @@ import { Linking, Pressable } from 'react-native';
 
 export const Contact = () => {
   return (
-    <Container>
+    <Container id="contact">
       {/* T */}
       <TitleGroup>
         <Title>Contato</Title>
