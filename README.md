@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+![image](https://user-images.githubusercontent.com/3481514/145904252-92e3dc1e-591f-410f-88a1-b4250f4ba6f2.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# getting started
 
-## Available Scripts
+```sh
+npx create-expo-app --template expo-template-storybook AwesomeStorybook
+```
 
-In the project directory, you can run:
+or
 
-### `npm start`
+```sh
+yarn create expo-app --template expo-template-storybook AwesomeStorybook
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# app
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+yarn start
+```
 
-### `npm test`
+# Ondevice
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In this template you can now run `yarn storybook` to start ondevice storybook or `yarn start` to start your expo app.
+This works via env variables and expo constants.
 
-### `npm run build`
+```sh
+# either
+yarn storybook
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# ios
+yarn storybook:ios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# android
+yarn storybook:android
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you add new stories on the native (ondevice version) you either need to have the watcher running or run the stories loader
 
-### `npm run eject`
+To update the stories one time
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+yarn storybook-generate
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Web
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Start react native web storybook:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+yarn storybook:web
+```
 
-## Learn More
+build react native web storybook:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+yarn build-storybook
+```

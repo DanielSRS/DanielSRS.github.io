@@ -1,43 +1,60 @@
-import React, {useEffect} from 'react';
-import './App.css';
+import React from 'react';
+import { createStyledView } from './components/StyledBuilder';
+import { ScrollView } from 'react-native';
+import { AboutMe } from './components/AboutMe/AboutMe';
+import { Navbar } from './components/Navbar/Navbar';
+import { Hero } from './components/Hero/Hero';
+import { Projects } from './components/Projects/Projects';
+import { Skills } from './components/Skills/Skills';
+import { Contact } from './components/Contact/Contact';
 
-import Cover from './componentes/Cover/Cover';
-import Glass from './componentes/Glass/Glass';
-import developerConding from './assets/animations/developerConding.json'
-import lottie from "lottie-web";
-
-function App() {
-  useEffect(() => {
-    const selectedElement = document?.querySelector("#developerAnimation");
-    if (selectedElement === null) {
-      return;
-    }
-    lottie.loadAnimation({
-      container: selectedElement,
-      animationData: developerConding,
-      renderer: "svg", // "canvas", "html"
-      loop: true, // boolean
-      autoplay: true, // boolean
-    });
-  }, []);
-
+export const App = () => {
   return (
-    <div className="App">
-      <Cover />
-      <Glass>
-        <div className='rowDiv'>
-          <div className='presentationGroup'>
-            <p className='presentationText introduction'>Oi, eu sou</p>
-            <p className='presentationText name'>Daniel</p>
-            <p className='presentationText whatIDo'>Desenvolvedor mobile, web e desktop</p>
-          </div>
-          <div>
-            <div id='developerAnimation'></div>
-          </div>
-        </div>
-      </Glass>
-    </div>
-  );
-}
+    <AppContainer>
+      <FixedContainer>
+        {/* Navbar */}
+        <Navbar />
+      </FixedContainer>
+      <ScrollView contentContainerStyle={alignItems}>
+        <Sections>
+          {/* Hero */}
+          <Hero />
 
-export default App;
+          {/* About me */}
+          <AboutMe />
+
+          {/* Projects */}
+          <Projects />
+
+          {/* Skills */}
+          <Skills />
+
+          {/* Contact */}
+          <Contact />
+        </Sections>
+      </ScrollView>
+    </AppContainer>
+  );
+};
+
+const AppContainer = createStyledView({
+  flex: 1,
+  backgroundColor: '#000',
+});
+
+const FixedContainer = createStyledView({
+  // maxWidth: 960,
+  // flex: 1,
+  // alignSelf: 'center',
+  // width: '100%',
+  backgroundColor: '#FFFFFF',
+});
+
+const Sections = createStyledView({
+  maxWidth: 960,
+  flex: 1,
+  width: '100%',
+  backgroundColor: '#FFFFFF',
+});
+
+const alignItems = { alignItems: 'center' } as const;
